@@ -1,0 +1,13 @@
+{
+"manifest_version": 3,
+"version": "1.0",
+"name": "blackjack",
+"action": {
+    "default_popup": "index.html",
+    "defaul_icon": "NicePng_poker-table-png_1898993.png"
+},
+"permissions": [
+    "storage",
+    "notifications"
+    ] 
+}

@@ -1,0 +1,32 @@
+Body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("NicePng_poker-table-png_1898993.png");
+    background-size:100% 105%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: rgb(232, 238, 240);
+    font-weight: bold;
+    font-size: x-large;
+    min-width: 780px;
+}
+h1 {
+    color:goldenrod;
+}
+
+#poruka-el {
+    font-style: italic;
+}
+button {
+    color: #171a18;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight:bolder;
+    border: none;
+    border-radius: 5px;
+    position: center;
+}
+line {
+    color: indigo;
+}
