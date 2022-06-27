@@ -1,32 +1,38 @@
 Body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-image: url("NicePng_poker-table-png_1898993.png");
-    background-size:100% 105%;
-    background-repeat: no-repeat;
-    text-align: center;
-    color: rgb(232, 238, 240);
-    font-weight: bold;
-    font-size: x-large;
-    min-width: 780px;
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: block;
+  background-image: url("NicePng_poker-table-png_1898993.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  color: rgb(232, 238, 240);
+  font-weight: bold;
+  font-size: x-large;
+  width: 800px;
+  height: 450px;
+  min-width: 800px;
+  padding: 25px;
 }
 h1 {
-    color:goldenrod;
+  color: goldenrod;
 }
 
 #poruka-el {
-    font-style: italic;
+  font-style: italic;
 }
 button {
-    color: #171a18;
-    width: 150px;
-    background: goldenrod;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight:bolder;
-    border: none;
-    border-radius: 5px;
-    position: center;
+  color: #171a18;
+  width: 150px;
+  background: goldenrod;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 5px;
+  position: center;
 }
 line {
-    color: indigo;
+  color: indigo;
 }
