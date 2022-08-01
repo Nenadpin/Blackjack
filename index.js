@@ -76,19 +76,19 @@ playerEl.textContent = `Igrac: ${player.name}  $: ${player.kredit}`;
 const populateDeck = () => {
   for (let j = 2; j < 15; j++) {
     deck[j - 2] = convert(j);
-    deck[j - 2].suit = "Clubs";
+    deck[j - 2].suit = "c";
   }
   for (let j = 2; j < 15; j++) {
     deck[j + 13 - 2] = convert(j);
-    deck[j + 13 - 2].suit = "Spades";
+    deck[j + 13 - 2].suit = "s";
   }
   for (let j = 2; j < 15; j++) {
     deck[j + 26 - 2] = convert(j);
-    deck[j + 26 - 2].suit = "Hearts";
+    deck[j + 26 - 2].suit = "h";
   }
   for (let j = 2; j < 15; j++) {
     deck[j + 39 - 2] = convert(j);
-    deck[j + 39 - 2].suit = "Diamonds";
+    deck[j + 39 - 2].suit = "d";
   }
 };
 
@@ -104,7 +104,7 @@ novaBtn.addEventListener("click", () => {
     karte.push(trecaKarta.card);
     sum += trecaKarta.value;
     vuci();
-    karteEl.textContent += " " + karte[karte.length - 1];
+    karteEl.innerHTML += `<img src="${trecaKarta.card}${trecaKarta.suit}.png" class="card"></img>`;
   }
 });
 startBtn.addEventListener("click", () => {
@@ -123,8 +123,10 @@ startBtn.addEventListener("click", () => {
   karte[0] = prvaKarta.card;
   karte[1] = drugaKarta.card;
   sum = prvaKarta.value + drugaKarta.value;
-  karteEl.textContent = `Karte: ${karte[0]} ${karte[1]}`;
-  dilerEl.textContent = `Diler: ${dilerKarte}`;
+  karteEl.innerHTML = `Karte: <img src="${prvaKarta.card}${prvaKarta.suit}.png" class="card"></img>`;
+  karteEl.innerHTML += `<img src="${drugaKarta.card}${drugaKarta.suit}.png" class="card"></img>`;
+
+  dilerEl.innerHTML = `Diler: <img src="back.png" class="card"/><img src="${diler.card}${diler.suit}.png" class="card"></img>`;
   vuci();
 });
 const vuci = () => {
@@ -168,6 +170,7 @@ proveraBtn.addEventListener("click", () => {
       igra = false;
       start();
     } else {
+      dilerEl.innerHTML = `Diler: <img src="${diler.card}${diler.suit}.png" class="card"></img>`;
       while (igra) {
         if (deck.length === 0) populateDeck();
         diler = deck.splice(
@@ -175,7 +178,7 @@ proveraBtn.addEventListener("click", () => {
           1
         )[0];
         dilerKarte.push(diler.card);
-        dilerEl.textContent += " " + diler.card;
+        dilerEl.innerHTML += `<img src="${diler.card}${diler.suit}.png" class="card"></img>`;
         dilerSum += diler.value;
         if (dilerSum > 21) {
           poruka.textContent = "Dobili ste!!!";
@@ -209,8 +212,7 @@ proveraBtn.addEventListener("click", () => {
             dobitak = false;
             player.kredit -= 10;
             localStorage.setItem("kredit", JSON.stringify(player.kredit));
-
-            playerEl.textContent = `Igrac: ${layer.name}  $: ${player.kredit}`;
+            playerEl.textContent = `Igrac: ${player.name}  $: ${player.kredit}`;
             igra = false;
             start();
             break;

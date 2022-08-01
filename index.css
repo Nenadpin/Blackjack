@@ -1,19 +1,32 @@
-Body {
-  margin: 0;
+* {
+  margin: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+body {
+  display: inline-block;
+  width: 800px;
+  height: 500px;
+  margin-top: 0;
+  overflow: hidden;
+}
+.main {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  display: block;
-  background-image: url("NicePng_poker-table-png_1898993.png");
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 800px;
+  height: 500px;
+  margin-top: 0;
+  flex-direction: column;
+  background-image: url("table.png");
   background-repeat: no-repeat;
   background-size: contain;
   text-align: center;
   color: rgb(232, 238, 240);
   font-weight: bold;
   font-size: x-large;
-  width: 800px;
-  height: 450px;
-  min-width: 800px;
-  padding: 25px;
 }
 h1 {
   color: goldenrod;
@@ -33,6 +46,19 @@ button {
   border-radius: 5px;
   position: center;
 }
-line {
-  color: indigo;
+#player-el {
+  color: goldenrod;
+}
+span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  margin: 0;
+}
+.card {
+  height: 60px;
+  width: 40px;
+  margin: 2px;
 }
